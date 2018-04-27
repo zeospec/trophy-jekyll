@@ -14,9 +14,9 @@
           {% for post in site.categories[category] limit: 1 %}
             <div class="card__img">
               {% if post.image-sm %}
-                <figure class="absolute-bg" style="background-image: url('{{ post.image-sm }}');"></figure>
+                <figure class="absolute-bg" style="background-image: url('{{ "/assets/img/" | append : post.image-sm }}');"></figure>
               {% else %}
-                <figure class="absolute-bg" style="background-image: url('{{ post.image }}');"></figure>
+                <figure class="absolute-bg" style="background-image: url('{{ "/assets/img/" | append : post.image }}');"></figure>
               {% endif %}
             </div>
           {% endfor %}
